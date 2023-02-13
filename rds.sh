@@ -34,16 +34,16 @@ delete() {
 main() {
     printf "1: List RDS instances\n2: Create RDS instance\n3: Delect RDS instance\n9: Exit\n"
     read -p "Select: " choice
-    if [[ $choice == 1 ]]
+    if [ "$choice" -eq "1" ]
     then
     list
-    elif [[ $choice == 2 ]]
+    elif [ "$choice" -eq "2" ]
     then
     create
-    elif [[ $choice == 3 ]]
+    elif [ "$choice" -eq "3" ]
     then
     delete
-    elif [[ $choice == 9 ]]
+    elif [ "$choice" -eq "9" ]
     then
     echo "Bye!"
     else
