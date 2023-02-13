@@ -11,7 +11,7 @@ create() {
 
 delete() {
     read -p "DB Instance ID: " instid
-    instcheck=openstack rds instance list | grep -o $instid
+    instcheck="$(openstack rds instance list | grep -o $instid)"
     if [ "$instcheck" = "$instid" ]
         then
         printf "You are deleting this instance: $instid.\n Are you sure?\n"
